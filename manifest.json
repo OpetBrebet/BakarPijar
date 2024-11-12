@@ -1,0 +1,28 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 3,
+    "version": "0.1.0",
+    "name": "Bakar Pijar",
+    "description": "Garbage Collector",
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "rule",
+                "enabled": true,
+                "path": "rule.json"
+            }
+        ]
+    },
+    "permissions": [
+        "declarativeNetRequestWithHostAccess",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*.pijarsekolah.id/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+    ]
+}
